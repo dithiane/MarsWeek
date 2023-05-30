@@ -10,7 +10,7 @@ public class Mars {
        meals = meals + (meals * .5);
        shipPopulation = shipPopulation + 5;
 
-       String landingLocation = "The Hill";
+       String landingLocation = "The Plain";
 
        if (landingLocation.equalsIgnoreCase("The Plain")) {
             System.out.println("Bbzzz landing on The Plain");
