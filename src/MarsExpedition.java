@@ -1,10 +1,15 @@
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+        // * 1. File Setup
+
 // Create another Java file in src called MarsExpedition
 public class MarsExpedition {
     // Within public class MarsExpedition create a public MarsExpedition constructor
     public MarsExpedition() {
+
+        // * 2. Expedition Bootup
+
         // Create a new Scanner variable named input to store the user’s input.
         Scanner input = new Scanner(System.in);
         int teamSize = 0;
@@ -36,7 +41,10 @@ public class MarsExpedition {
         } else {
             System.out.println("Too bad you are team leader. You have to go.");
         }
-        // ask how many people they want on their team. Use an if statement to check if their answer is greater than 2.
+
+        // * 3. Team Setup
+
+        // Ask how many people they want on their team. Use an if statement to check if their answer is greater than 2.
         // If it is, print “That’s way to many people. We can only send 2 more members.” And set the team size to be 2 anyway.
         // Check for other cases as well. The team size always needs to be exactly 2 (there are only 3 seats in the pod)
         System.out.println("How many people they want on their team ?");
@@ -54,13 +62,15 @@ public class MarsExpedition {
             teamSize = 2;
         } else if (teamSize == 2) System.out.println("That's a perfect sized team. Good job.");
 
+        // * 4. Snack choice
+
         // The program should then log: “You are allowed to bring one snack with you.
         // What do you want to bring?”
         System.out.println("You are allowed to bring one snack with you. What do you bring?");
         String snack = input.next();
         System.out.println("Nice choice, you will be bringing a " + snack + " with you");
 
-        // 5. Choose a vehicle
+        // * 5. Choose a vehicle
 
         // Present the user with a list of vehicles that are in a lettered or numbered list.
         System.out.println("Select the vehicle:" +
@@ -68,8 +78,28 @@ public class MarsExpedition {
                 "\nB: A Chevy Silverado" +
                 "\nC: A Honda Civic");
         String vehicleChoice = input.next();
+        if (vehicleChoice.equalsIgnoreCase("A")) {
+            vehicleChoice = "a Mars Rover";
+        } else if (vehicleChoice.equalsIgnoreCase("B")) {
+            vehicleChoice = "a Chevy Silverado";
+        } else if (vehicleChoice.equalsIgnoreCase("C")) {
+            vehicleChoice = "a Honda Civic";
+        } else {
+            vehicleChoice = "your feet";
+        }
 
-        System.out.println(vehicleChoice);
+        // * 6. The final message
+
+        System.out.println("Your expedition team is now ready" +
+                "\nLed by " + name + " with " + teamSize + " teammates." +
+                "\nTo explore the surface of Mars using " + vehicleChoice + "." +
+                "\nExploration team heads out in" +
+                "\n5...." +
+                "\n4...." +
+                "\n3...." +
+                "\n2...." +
+                "\n1...." +
+                "\nGO GO GO!");
     }
 
 }

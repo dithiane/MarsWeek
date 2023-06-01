@@ -1,6 +1,9 @@
 public class Mars {
     // Create a public static void main(String[] args) function
     public static void main(String[] args) throws InterruptedException {
+
+        // * 1. Variables & Data Types
+
         // Create a string variable named colonyName, and set it equal to your desired name
        String colonyName = "Asgards";
         // Create an int variable named shipPopulation, and set it equal to 300
@@ -9,6 +12,9 @@ public class Mars {
        double meals = 4000.0;
         // Create a boolean variable named landing, and set it equal to true
        boolean landing = true;
+
+        // * 2. Mathematical Operators
+
         // Calculate how many meals are left after landing using mathematical operators
        meals = meals - (shipPopulation * 0.75);
         // Print the number of meals that are left.
@@ -17,26 +23,31 @@ public class Mars {
         // it was using a mathematical expression.
        meals = meals + (meals * .5);
         // The births onboard are very perfectly timed and 5 more babies join the population during the 2 days it takes
-        // to land. Reassign shipPopulation to reflect that.
+        // to land. Reassign shipPopulation to reflect that.E
        shipPopulation = shipPopulation + 5;
 
+        // * 3. Conditional Love
+
         // Now create a String value called landingLocation and set it equal to “The Hill” or “The Plain” or “The Ocean”.
-       String landingLocation = "The Plain";
+       String landingLocation = "The Hill";
         // Create an if-else statement that checks to see if the landingLocation is equal to “The Plain” (ignoring case)
        if (landingLocation.equalsIgnoreCase("The Plain")) {
             System.out.println("Bbzzz landing on The Plain");
        } else {
             System.out.println("ERROR!!! Flight plan already set. Landing on The Plain");
        }
+
+        // * 5. Looping Function
+
         // Back inside the main method, reassign the value of landing to be the invocation of the landingCheck() method
         // passing in any integer for the number of minutes left until landing.
-       landing = landingCheck(1);
-        // Instantiate a GuessingGame object
-       // new GuessingGame();
+       landing = landingCheck(5);
+        // Instantiate a GuessingGame objectEle
+       new GuessingGame();
         // Instantiate a MarsExpedition object
        new MarsExpedition();
         // Instantiate a FindingsList object
-        // new FindingsList();
+       new FindingList();
     }
 
     // Outside the main method, create a public function called landingCheck that returns a boolean value and takes in
